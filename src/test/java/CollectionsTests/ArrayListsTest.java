@@ -117,7 +117,7 @@ public class ArrayListsTest {
         ArrayList<Integer> actual = arrayLists.removeAll(original, toRemove);
         original.remove(0);
         original.remove(0);
-        original.remove(0);
+        //original.remove(0);
         // Then
         Assert.assertEquals(original, actual);
     }
