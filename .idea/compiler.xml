@@ -6,9 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Assessment2Sunday" />
-        <module name="AssessmentForCollections" />
         <module name="AssessmentForFun" />
+        <module name="AssessmentForCollections" />
+        <module name="Assessment2Sunday" />
       </profile>
     </annotationProcessing>
   </component>
