@@ -45,9 +45,9 @@ public class DansDilemma {
             }
         }
         ArrayList<Double> ans = new ArrayList<>();
-        for(int i = 0; i<temp1.size();i++){
-            if(!ans.contains(temp1.get(i)) && !temp1.get(i).isNaN()){
-                ans.add(temp1.get(i));
+        for (Double aDouble : temp1) {
+            if (!ans.contains(aDouble) && !aDouble.isNaN()) {
+                ans.add(aDouble);
             }
         }
         return ans.size();
@@ -55,14 +55,13 @@ public class DansDilemma {
 
     public Integer dilemmaOfN(Double... args){
         int size = args.length;
-        int count = 0;
         ArrayList<Double> temp1 = new ArrayList<>();
         for (int i = 0;i<size;i++){
             for(int j = i+1;j<size;j++){
                 if(!temp1.contains(args[i] + args[j])){
                     temp1.add(args[i] + args[j]);
                 }
-                if(!temp1.contains(temp1.add(args[i] * args[j]))){
+                if(!temp1.contains(args[i] * args[j])){
                     temp1.add(args[i] * args[j]);
                 }
                 if(!temp1.contains(args[i]-args[j])){
@@ -78,18 +77,12 @@ public class DansDilemma {
                     temp1.add(args[j]/args[i]);
                 }
             }
-            System.out.println(count);
-            count++;
         }
-        System.out.println("HELLO: " + temp1.size());
-        count=0;
         ArrayList<Double> ans = new ArrayList<>();
-        for(int i = 0; i<temp1.size();i++){
-            if(!ans.contains(temp1.get(i)) && !temp1.get(i).isNaN() && !Double.isInfinite(temp1.get(i))){
-                ans.add(temp1.get(i));
+        for (Double aDouble : temp1) {
+            if (!ans.contains(aDouble) && !aDouble.isNaN() && !Double.isInfinite(aDouble)) {
+                ans.add(aDouble);
             }
-            System.out.println(count);
-            count++;
         }
         return ans.size();
     }
