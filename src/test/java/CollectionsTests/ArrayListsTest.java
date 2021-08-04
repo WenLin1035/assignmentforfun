@@ -35,6 +35,21 @@ public class ArrayListsTest {
         Assert.assertEquals(original1, actual);
     }
 
+    //personal test
+    @Test
+    public void addStringTest(){
+        ArrayList<Integer> original1 = new ArrayList<Integer>();
+        original1.add(5);
+        original1.add(5);
+        original1.add(5);
+        ArrayList<Integer> original2 = new ArrayList<Integer>();
+        original2.add(7);
+        original2.add(7);
+        original2.add(2);
+        ArrayList<Integer> actual = arrayLists.addShit(original1, original2);
+        System.out.println(actual);
+    }
+
     @Test
     public void addShitTest2(){
         // Given

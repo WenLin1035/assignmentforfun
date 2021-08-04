@@ -12,7 +12,7 @@ import java.util.TreeMap;
 
 public class MapPracticeTests {
     private MapPractice mapPractice;
-    private Map map1;
+    private Map<String, String> map1;
 
     @Before
     public void setup(){
@@ -118,6 +118,16 @@ public class MapPracticeTests {
         // Then
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void fibonacciTreeTest6(){
+        // Given
+        Integer upTo = 4;
+        Map<Integer, Integer> actual = mapPractice.fibonacciTree(upTo);
+        // Then
+        System.out.println(actual);
+    }
+
 
     @Test
     public void fibonacciTreeTest2(){
